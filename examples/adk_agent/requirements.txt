@@ -1,0 +1,2 @@
+# Google ADK pins the MCP SDK to 1.x, FastMCP 4 needs 2.x -> the agent gets its own venv.
+google-adk[mcp]>=2.8

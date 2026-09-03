@@ -1,0 +1,7 @@
+2026-09-03 00:25:17,167 INFO forge MCP 'travel-intel' on http://0.0.0.0:8002/mcp
+INFO:     Started server process [492731]
+INFO:     Waiting for application startup.
+2026-09-03 00:25:17,258 INFO mcp.server.streamable_http_manager StreamableHTTP session manager started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8002 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50620 - "GET /health HTTP/1.1" 200 OK

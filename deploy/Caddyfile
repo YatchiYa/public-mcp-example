@@ -1,0 +1,5 @@
+# Reverse proxy + HTTPS automatique (Let's Encrypt). Remplacez le domaine.
+mcp.votredomaine.com {
+    encode gzip
+    reverse_proxy database:8000
+}

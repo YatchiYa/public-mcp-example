@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "travel-intel-local": {
+      "command": "uv",
+      "args": ["run", "--directory", "/ABSOLUTE/PATH/TO/mcp-creator-test", "python", "-m", "forge", "run", "servers.travel"],
+      "env": { "MCP_TRANSPORT": "stdio" }
+    },
+    "travel-intel-remote-bridge": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote@latest", "http://localhost:8000/mcp", "--header", "Authorization: Bearer ${MCP_API_KEY}"],
+      "env": { "MCP_API_KEY": "dev-key-alice" }
+    }
+  }
+}

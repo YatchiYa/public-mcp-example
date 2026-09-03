@@ -1,0 +1,36 @@
+[project]
+name = "mcp-forge"
+version = "0.1.0"
+description = "A small, production-grade kit to build MCP servers (FastMCP 4 / MCP spec 2026-07-28) callable from Google ADK, Claude, or any MCP client."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=4.0,<5",
+    "httpx>=0.28",
+    "sqlalchemy>=2.0",
+    "psycopg[binary]>=3.2",
+    "uvicorn>=0.30",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.6",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.setuptools]
+packages = ["forge", "servers"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

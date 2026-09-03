@@ -1,0 +1,17 @@
+services:
+  travel:
+    build: .
+    environment:
+      SERVER: servers.travel
+      MCP_API_KEYS: ${MCP_API_KEYS:-}
+      MCP_RATE_LIMIT_RPS: "20"
+    ports: ["8000:8000"]
+
+  database:
+    build: .
+    environment:
+      SERVER: servers.database
+      MCP_API_KEYS: ${MCP_API_KEYS:-dev-key-alice:alice:db:read|db:write}
+      DATABASE_URL: ${DATABASE_URL:-sqlite:////data/demo.db}
+    volumes: ["./demo.db:/data/demo.db"]
+    ports: ["8001:8000"]

@@ -1,0 +1,28 @@
+# Production : 1 conteneur MCP (database) + Caddy (TLS auto sur le sous-domaine).
+#   cp deploy/.env.example deploy/.env  && éditer  && docker compose -f deploy/docker-compose.prod.yml up -d --build
+services:
+  database:
+    build:
+      context: ..
+      args: { SERVER: servers.database }
+    env_file: .env
+    environment:
+      MCP_TRANSPORT: http
+      MCP_HOST: 0.0.0.0
+      MCP_PORT: "8000"
+    restart: unless-stopped
+    expose: ["8000"]          # jamais publié directement : seul Caddy y accède
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports: ["80:80", "443:443"]
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on: [database]
+
+volumes:
+  caddy_data:
+  caddy_config:

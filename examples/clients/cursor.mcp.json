@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "travel-intel": {
+      "url": "http://localhost:8000/mcp",
+      "headers": { "Authorization": "Bearer ${env:MCP_API_KEY}" }
+    },
+    "travel-intel-stdio": {
+      "command": "uv",
+      "args": ["run", "--directory", "${workspaceFolder}", "python", "-m", "forge", "run", "servers.travel"],
+      "env": { "MCP_TRANSPORT": "stdio" }
+    }
+  }
+}

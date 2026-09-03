@@ -1,0 +1,18 @@
+{
+  "inputs": [
+    { "id": "mcpApiKey", "type": "promptString", "description": "MCP API key", "password": true }
+  ],
+  "servers": {
+    "travel-intel": {
+      "type": "http",
+      "url": "http://localhost:8000/mcp",
+      "headers": { "Authorization": "Bearer ${input:mcpApiKey}" }
+    },
+    "travel-intel-stdio": {
+      "type": "stdio",
+      "command": "uv",
+      "args": ["run", "--directory", "${workspaceFolder}", "python", "-m", "forge", "run", "servers.travel"],
+      "env": { "MCP_TRANSPORT": "stdio" }
+    }
+  }
+}

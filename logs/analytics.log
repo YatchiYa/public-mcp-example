@@ -1,0 +1,29 @@
+2026-09-03 00:25:17,358 INFO forge MCP 'analytics' on http://0.0.0.0:8003/mcp
+INFO:     Started server process [492733]
+INFO:     Waiting for application startup.
+2026-09-03 00:25:17,380 INFO mcp.server.streamable_http_manager StreamableHTTP session manager started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8003 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52958 - "GET /health HTTP/1.1" 200 OK
+2026-09-03 00:28:16,495 INFO mcp.server.streamable_http_manager Created new transport with session ID: 3d00310b67e540a4be2d43e975c85adb
+INFO:     127.0.0.1:37584 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37594 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:37584 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37610 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37594 - "POST /mcp HTTP/1.1" 200 OK
+2026-09-03 00:28:18,414 INFO mcp.server.streamable_http_manager Created new transport with session ID: 6229d14a678d401f8629117e9d3b46e6
+INFO:     127.0.0.1:44950 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44952 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:44950 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44958 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44952 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44958 - "POST /mcp HTTP/1.1" 200 OK
+2026-09-03 00:28:18,452 INFO forge.audit {"tool": "kpis", "client": "agent-fr", "ok": true, "ms": 3.3}
+2026-09-03 00:28:20,198 INFO mcp.server.streamable_http_manager Created new transport with session ID: 409f55a6674a490a9eaa6f35493d1172
+INFO:     127.0.0.1:44972 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44986 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:44972 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44990 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44986 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44990 - "POST /mcp HTTP/1.1" 200 OK
+2026-09-03 00:28:20,239 INFO forge.audit {"tool": "revenue", "client": "alice", "ok": true, "ms": 2.5}
